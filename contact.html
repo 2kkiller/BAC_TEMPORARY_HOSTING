@@ -12,7 +12,7 @@
   <!-- Header -->
   <header class="site-header">
     <div class="nav-container">
-      <img src="assets/logo.png" alt="BAC Logo" class="logo"/>
+      <img src="bac logo.jpg" alt="BAC Logo" class="logo"/>
       <nav>
         <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
@@ -44,21 +44,24 @@
     <!-- Form -->
     <section class="contact-form section-center" data-aos="fade-right">
       <h2>Send Us a Message</h2>
-      <form>
+      <form id="contact-form">
         <label for="name">Full Name:</label>
-        <input type="text" id="name" required>
+        <input type="text" id="name" name="name" required>
 
         <label for="email">Email Address:</label>
-        <input type="email" id="email" required>
+        <input type="email" id="email" name="email" required>
 
         <label for="phone">Phone Number:</label>
-        <input type="tel" id="phone">
+        <input type="tel" id="phone" name="phone">
 
         <label for="message">Your Message:</label>
-        <textarea id="message" rows="5" required></textarea>
+        <textarea id="message" name="message" rows="5" required></textarea>
 
         <button type="submit" class="btn">Submit</button>
       </form>
+
+      <!-- Response message -->
+      <p id="response" style="margin-top: 10px; color: green;"></p>
     </section>
   </main>
 
@@ -69,6 +72,48 @@
 
   <!-- AOS Script -->
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <script>AOS.init({ duration: 1000 });</script>
+  <script>
+    // Initialize AOS animations
+    AOS.init({ duration: 1000 });
+
+    // Form submission logic
+    document.addEventListener('DOMContentLoaded', function () {
+      const form = document.getElementById('contact-form');
+      const response = document.getElementById('response');
+
+      if (form) {
+        form.addEventListener('submit', function (e) {
+          e.preventDefault();
+
+          const data = {
+            name: form.name.value,
+            email: form.email.value,
+            phone: form.phone.value,
+            message: form.message.value
+          };
+
+          fetch('https://script.google.com/macros/s/AKfycbw8J6Mkj98Cz21Rsi6uR-6_V5oLh6wOz-kPHoFJU887b32phF_a8XH7ns8YIvAhoheP/exec', {
+            method: 'POST',
+            body: JSON.stringify(data),
+            headers: {
+              'Content-Type': 'application/json'
+            }
+          })
+          .then(res => res.json())
+          .then(data => {
+            response.style.color = "green";
+            response.textContent = "Submitted successfully!";
+            form.reset();
+          })
+          .catch(err => {
+            response.style.color = "red";
+            response.textContent = "Submission failed.";
+            console.error(err);
+          });
+        });
+      }
+    });
+  </script>
 </body>
 </html>
+
