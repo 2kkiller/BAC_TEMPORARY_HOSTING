@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact | Bunmi Adelugba & Co.</title>
+
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="nav-container">
+      <img src="assets/logo.png" alt="BAC Logo" class="logo"/>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Intro -->
+    <section class="contact-intro section-center" data-aos="fade-up">
+      <h1>Get in Touch</h1>
+      <p>Have a question or need our services? Reach out — we're here to help.</p>
+    </section>
+
+    <!-- Contact Details -->
+    <section class="contact-details section-center" data-aos="fade-left">
+      <h2>Contact Info</h2>
+      <p><strong>Address:</strong><a href="https://maps.app.goo.gl/ZNtd5uc1q1JJEHAJ9">Plot 6, Ekikunam Street, Utako, Abuja.</a></p>
+      <p><strong>Phone:</strong> 08061785959, 08023256750, 08067310338</p>
+      <p><strong>Email:</strong> <a href="mailto:badecharteredaccts.ng@gmail.com">badecharteredaccts.ng@gmail.com</a></p>
+    </section>
+
+    <!-- Form -->
+    <section class="contact-form section-center" data-aos="fade-right">
+      <h2>Send Us a Message</h2>
+      <form>
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" required>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone">
+
+        <label for="message">Your Message:</label>
+        <textarea id="message" rows="5" required></textarea>
+
+        <button type="submit" class="btn">Submit</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Bunmi Adelugba & Co. — Chartered Accountants & Tax Practitioners.</p>
+  </footer>
+
+  <!-- AOS Script -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>AOS.init({ duration: 1000 });</script>
+</body>
+</html>
