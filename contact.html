@@ -77,14 +77,14 @@
       const form = document.getElementById('contact-form');
       const response = document.getElementById('response');
 
-      // ✅ Your live Google Apps Script endpoint
+      // ✅ Your live Google Apps Script Web App URL
       const API_ENDPOINT = 'https://script.google.com/macros/s/AKfycbznurfbG19BgH7IV4BjaCF7BY-w2uT6ODXuoWbrhXv1dUlFWJZxIQtJHk85_I3NkOE/exec';
 
       if (form) {
         form.addEventListener('submit', async function (e) {
           e.preventDefault();
 
-          const data = {
+          const payload = {
             name: form.name.value.trim(),
             email: form.email.value.trim(),
             phone: form.phone.value.trim(),
@@ -95,21 +95,20 @@
           response.textContent = "Sending message...";
 
           try {
-            const res = await fetch(API_ENDPOINT, {
+            await fetch(API_ENDPOINT, {
               method: 'POST',
-              mode: 'no-cors',  // Important for Google Apps Script
-              body: JSON.stringify(data),
-              headers: { 'Content-Type': 'application/json' }
+              mode: 'no-cors',  // bypass CORS
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(payload)
             });
 
-            // Since 'no-cors' prevents reading response, show success by default
             response.style.color = "green";
-            response.textContent = "Thank you! Your message has been sent successfully.";
+            response.textContent = "✅ Thank you! Your message has been sent successfully.";
             form.reset();
           } catch (err) {
+            console.error('Submission error:', err);
             response.style.color = "red";
-            response.textContent = "Submission failed. Please try again or email us directly.";
-            console.error('Error submitting form:', err);
+            response.textContent = "❌ Submission failed. Please try again or email us directly.";
           }
         });
       }
