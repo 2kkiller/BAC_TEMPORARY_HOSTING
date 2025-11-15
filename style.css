@@ -42,7 +42,7 @@ header.site-header {
 }
 
 /* Default (laptop/desktop) */
-.logo img {
+.logo {
   width: auto;
   height: 70px; /* Adjust to your taste */
   max-width: 100%;
@@ -51,7 +51,7 @@ header.site-header {
 
 /* Mobile phones */
 @media screen and (max-width: 600px) {
-  .logo img {
+  .logo{
     height: 50px; /* Smaller for phone */
   }
 }
@@ -489,6 +489,7 @@ footer {
 footer a:hover {
   color: #d4af37;
 }
+
 
 
 
