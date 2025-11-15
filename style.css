@@ -42,20 +42,29 @@ header.site-header {
 }
 
 /* Default (laptop/desktop) */
-.logo {
-  width: auto;
-  height: 70px; /* Adjust to your taste */
+.logo{
+  height: 70px;              /* Good for laptops */
   max-width: 100%;
   object-fit: contain;
+
+  border: 2px solid #800020; /* Burgundy border (optional) */
+  padding: 6px;
+  border-radius: 50px;       /* This makes the border oval */
 }
 
 /* Mobile phones */
 @media screen and (max-width: 600px) {
   .logo{
-    height: 50px; /* Smaller for phone */
+    height: 50px;            /* Smaller for phones */
+    border-radius: 40px;     /* Slightly tighter oval */
   }
 }
 
+/* Make sure the container behaves well */
+.logo{
+  display: flex;
+  align-items: center;
+}
 nav {
   display: flex;
 }
@@ -489,6 +498,7 @@ footer {
 footer a:hover {
   color: #d4af37;
 }
+
 
 
 
