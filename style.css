@@ -1,10 +1,26 @@
+/* =================================
+   KEYFRAMES FOR DYNAMIC ANIMATIONS
+================================= */
+
+@keyframes pulseBorder {
+    0% { box-shadow: 0 0 0 0 rgba(0, 31, 92, 0.4); } /* Navy Shadow */
+    70% { box-shadow: 0 0 0 5px rgba(0, 31, 92, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(0, 31, 92, 0); }
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-5px); }
+    100% { transform: translateY(0px); }
+}
+
 /* Reset and Base styles */
 body {
   font-family: Garamond, serif;
   margin: 0;
   padding: 0;
   color: #111;
-  background-color: #fff; /* Keep body background white */
+  background-color: #f3f4f6; /* Light Gray/Off-White base background */
   line-height: 1.7;
 }
 
@@ -20,28 +36,12 @@ ul {
   margin: 0;
 }
 
-/* =================================
-   KEYFRAMES FOR DYNAMIC ANIMATIONS
-================================= */
-
-@keyframes pulseBorder {
-    0% { box-shadow: 0 0 0 0 rgba(128, 0, 32, 0.4); }
-    70% { box-shadow: 0 0 0 5px rgba(128, 0, 32, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(128, 0, 32, 0); }
-}
-
-@keyframes float {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-5px); }
-    100% { transform: translateY(0px); }
-}
-
 /* =============================
    HEADER & NAVIGATION
 ============================= */
-/* Header with Dynamic Burgundy Gradient */
+/* Header with Dynamic Navy Gradient */
 header.site-header {
-  background: linear-gradient(90deg, #800020 0%, #4d0013 70%, #990025 100%);
+  background: linear-gradient(90deg, #001F5C 0%, #001236 70%, #002A7D 100%); /* Navy Gradient */
   color: white;
   padding: 1rem 2rem;
   position: sticky;
@@ -56,8 +56,14 @@ header.site-header {
   flex-wrap: wrap;
 }
 
+/* Logo */
 .logo {
-  height: 60px;
+  height: 60px; /* Standardized to 60px */
+}
+
+/* Navigation Links */
+nav {
+  display: flex;
 }
 
 .nav-links {
@@ -68,21 +74,39 @@ header.site-header {
 .nav-links li a {
   color: white;
   font-weight: 600;
+  position: relative; /* For underline effect */
+}
+
+.nav-links li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: -5px;
+    left: 0;
+    background: #FFC400; /* Gold Underline */
+    transition: width 0.3s ease-out;
 }
 
 .nav-links li a:hover,
 .nav-links li a.active {
-  color: #ffd700; /* Gold on hover or active */
-  text-shadow: 0 0 8px rgba(255, 215, 0, 0.7); /* Brighter gold shadow */
+  color: #FFC400; /* Bright Gold accent */
+  text-shadow: 0 0 8px rgba(255, 196, 0, 0.7);
 }
 
-/* Hamburger (mobile menu icon) styles retained */
+.nav-links li a:hover::after,
+.nav-links li a.active::after {
+    width: 100%;
+}
+
+/* Hamburger (mobile menu icon) */
 .hamburger {
   display: none;
   flex-direction: column;
   cursor: pointer;
   gap: 5px;
 }
+
 .hamburger span {
   width: 25px;
   height: 3px;
@@ -91,16 +115,35 @@ header.site-header {
   transition: all 0.3s ease;
 }
 
+/* Toggle Styles */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+nav#nav-menu {
+  transition: max-height 0.3s ease;
+}
+
+nav#nav-menu.active {
+  display: block;
+}
+
 /* =============================
    HERO SECTION
 ============================= */
-/* Hero with Dynamic Burgundy Gradient */
+/* Hero with Dynamic Navy Gradient & Animation */
 .hero {
   text-align: center;
   padding: 4rem 2rem;
-  background: linear-gradient(135deg, #800020, #a00028, #4d0013); 
+  background: linear-gradient(135deg, #001F5C, #002A7D, #001236); /* Navy Gradient */
   color: white;
-  animation: pulseBorder 4s infinite; /* Dynamic animation added */
+  animation: pulseBorder 4s infinite;
 }
 
 .hero h1 {
@@ -138,33 +181,33 @@ header.site-header {
   text-align: center;
 }
 
-/* Gradient Button (Primary Burgundy) */
+/* Gradient Button (Primary Navy) */
 .btn {
-  background: linear-gradient(to right, #800020, #a00028); 
+  background: linear-gradient(to right, #001F5C, #002A7D); /* Navy Gradient */
   color: white;
   border: none;
-  box-shadow: 0 4px 10px rgba(128, 0, 32, 0.4);
+  box-shadow: 0 4px 10px rgba(0, 31, 92, 0.4);
 }
 
 .btn:hover {
-  background: linear-gradient(to right, #c10030, #5e0017);
-  transform: translateY(-3px); /* Increased lift */
+  background: linear-gradient(to right, #003399, #00174D);
+  transform: translateY(-3px);
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
 }
 
 /* Outline Button (Gold Accent Border) */
 .btn-outline {
   border: 2px solid;
-  border-image: linear-gradient(to right, #ffd700, #ffc400); /* Gold gradient border */
+  border-image: linear-gradient(to right, #FFC400, #F0B300); /* Gold gradient border */
   border-image-slice: 1;
-  color: #800020; /* Burgundy text */
+  color: #001F5C; /* Navy text */
   background: transparent;
 }
 
 .btn-outline:hover {
-  background: #800020; /* Burgundy background on hover */
-  color: #ffd700; /* Gold text on hover */
-  transform: translateY(-3px); /* Increased lift */
+  background: #FFC400; /* Gold background on hover */
+  color: #001F5C; /* Navy text on hover */
+  transform: translateY(-3px);
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
 }
 
@@ -172,25 +215,62 @@ header.site-header {
    SECTION BACKGROUNDS
 ============================= */
 .vision-section {
-  background: #f9f9f9;
+  background: #FFFFFF; /* Pure white */
 }
+
+/* Mission section with faint Gold trace gradient */
 .mission-section {
-  background: #fff8e1;
+  background: #F3F4F6; /* Light Gray */
+  background-image: repeating-linear-gradient(
+    45deg,
+    #F3F4F6, 
+    #F3F4F6 10px, 
+    rgba(255, 196, 0, 0.05) 10px, /* Faint Gold Trace */
+    rgba(255, 196, 0, 0.05) 11px
+  );
 }
+
 .values-section {
-  background: #fdf0f2;
+  background: #FFFFFF; /* Pure white */
 }
+
 .cta-section {
-  background: linear-gradient(to right, #4d0013, #800020);
+  background: linear-gradient(to right, #001236, #001F5C); /* Darker Navy to Navy */
   color: white;
 }
 
 /* =============================
+   VALUES LIST
+============================= */
+.values-section ul {
+  padding-left: 0; /* Align with new centered design */
+}
+
+.values-list li {
+  background: #F3F4F6; /* Light Gray background for list item */
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border-left: 4px solid;
+  border-image: linear-gradient(to bottom, #FFC400, #F0B300); /* Gold gradient border */
+  border-image-slice: 1;
+  text-align: left;
+  transition: all 0.3s ease-in-out;
+}
+
+.value-list li:hover {
+  background: #E5E7EB; /* Slightly darker gray on hover */
+  border-left-color: #FFC400;
+  transform: translateX(10px);
+  box-shadow: 0 4px 10px rgba(0, 31, 92, 0.1);
+}
+
+
+/* =============================
    FOOTER
 ============================= */
-/* Footer with Dynamic Burgundy Gradient */
+/* Footer with Dynamic Navy Gradient */
 footer {
-  background: linear-gradient(90deg, #800020 0%, #4d0013 70%, #990025 100%);
+  background: linear-gradient(90deg, #001F5C 0%, #001236 70%, #002A7D 100%);
   color: white;
   text-align: center;
   padding: 1rem;
@@ -199,46 +279,107 @@ footer {
 /* =============================
    CONTACT PAGE
 ============================= */
+.contact-intro,
+.contact-details,
+.contact-form {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 3rem 1.5rem;
+}
 
 .contact-intro h1,
 .contact-details h2,
 .contact-form h2 {
-  color: #800020; /* Burgundy */
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #001F5C; /* Navy */
+}
+
+.contact-intro p,
+.contact-details p {
+  margin-bottom: 1rem;
+  font-size: 1.05rem;
+  line-height: 1.6;
 }
 
 .contact-details a {
-  color: #800020; /* Burgundy */
+  color: #001F5C; /* Navy */
+  font-weight: bold;
+  transition: all 0.3s ease;
 }
 
 .contact-details a:hover {
-  color: #ffd700; /* Gold on hover */
-  text-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+  color: #FFC400; /* Gold on hover */
+  text-shadow: 0 0 5px rgba(255, 196, 0, 0.3);
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
 }
 
 .contact-form label {
-  color: #800020; /* Burgundy */
+  align-self: flex-start;
+  font-weight: 600;
+  color: #001F5C; /* Navy */
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: Garamond, serif;
+  font-size: 1rem;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-  border-color: #800020;
-  box-shadow: 0 0 0 3px rgba(128, 0, 32, 0.3); /* Softer focus shadow */
+  border-color: #001F5C; /* Navy focus border */
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 31, 92, 0.3);
 }
 
 /* =============================
    SERVICES PAGE
 ============================= */
 .services-header h1 {
-  color: #800020; /* Burgundy */
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #001F5C; /* Navy */
+}
+
+.services-header p {
+  font-size: 1.05rem;
+  margin-bottom: 2rem;
+}
+
+.service-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
 }
 
 .service-card {
   /* Added subtle float animation */
   animation: float 6s ease-in-out infinite;
+  background-color: #FFFFFF; /* White card background */
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
   border-left: 5px solid;
-  border-image: linear-gradient(to bottom, #800020, #c10030); /* Burgundy gradient border */
+  border-image: linear-gradient(to bottom, #001F5C, #003399); /* Navy gradient border */
   border-image-slice: 1;
+  border-radius: 8px;
+  padding: 1.5rem;
+  transition: all 0.3s ease-in-out;
+  text-align: left;
 }
 
 .service-card:nth-child(even) {
@@ -247,51 +388,103 @@ footer {
 
 .service-card:hover {
   transform: translateY(-8px); /* Increased lift on hover */
-  border-left-color: #ffd700;
+  border-left-color: #FFC400; /* Gold hover accent */
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .service-card h3 {
-  color: #800020;
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+  color: #001F5C; /* Navy */
 }
 
-/* =============================
-   ABOUT & HOME VALUES LIST
-============================= */
-.section-center h2 {
-  color: #800020; /* Burgundy */
+.service-card p {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
 }
 
-.value-list li {
-  background: #fdf0f2;
-  padding: 0.75rem;
+/* ========================================
+   ABOUT PAGE STYLING
+=========================================== */
+
+/* Headings */
+.about-intro h1,
+.why-choose h2,
+.about-values h2 {
+  font-size: 2rem;
+  font-weight: bold;
   margin-bottom: 1rem;
+  color: #001F5C; /* Navy */
+}
+
+/* Paragraphs */
+.about-intro p,
+.why-choose p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+/* Values List */
+.about-values ul.value-list {
+  padding-left: 0;
+  margin-top: 1.5rem;
+  text-align: center; /* Center list items for a better mobile-first layout */
+}
+
+/* Specific About Page Value list items */
+.about-values ul.value-list li {
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  background: #F3F4F6; /* Light Gray */
   border-left: 4px solid;
-  border-image: linear-gradient(to bottom, #ffd700, #ffc400); /* Gold gradient border */
+  border-image: linear-gradient(to bottom, #FFC400, #F0B300); /* Gold gradient border */
   border-image-slice: 1;
-  text-align: left;
+  border-radius: 4px;
   transition: all 0.3s ease-in-out;
 }
 
-.value-list li:hover {
-  background: #f3e6e8;
-  border-left-color: #ffd700;
-  transform: translateX(10px); /* Increased horizontal movement */
-  box-shadow: 0 4px 10px rgba(128, 0, 32, 0.1);
+.about-values ul.value-list li:hover {
+  background: #E5E7EB; /* Slightly darker gray on hover */
+  border-left-color: #FFC400;
+  transform: translateX(10px);
+  box-shadow: 0 4px 10px rgba(0, 31, 92, 0.1);
 }
 
 /* ========================================
    BLOG PAGE STYLES
 =========================================== */
+
 .blog-header h1 {
-  color: #800020;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #001F5C; /* Navy */
+  margin-bottom: 1rem;
+}
+
+.blog-header p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.blog-list {
+  display: grid;
+  gap: 2rem;
 }
 
 .blog-card {
   /* Added subtle float animation */
   animation: float 6s ease-in-out infinite;
+  background: #ffffff;
+  border: 1px solid #ccc;
+  border-left: 5px solid #001F5C; /* Navy border */
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: left;
+  transition: all 0.3s ease-in-out;
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  border-left: 5px solid #800020;
 }
 
 .blog-card:nth-child(odd) {
@@ -300,16 +493,24 @@ footer {
 
 .blog-card:hover {
   transform: translateY(-8px);
-  border-left-color: #ffd700;
+  border-left-color: #FFC400; /* Gold hover accent */
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .blog-card h3 {
-  color: #800020;
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  color: #001F5C; /* Navy */
+}
+
+.blog-card p {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 1rem;
 }
 
 /* =============================
-   RESPONSIVE STYLES (Retained and Cleaned Up)
+   RESPONSIVE STYLES (FINAL)
 ============================= */
 @media (max-width: 768px) {
   /* --- General Mobile Adjustments (Header & Nav) --- */
@@ -349,30 +550,34 @@ footer {
 
   .btn, .btn-outline {
     width: 100%;
-    /* Ensure buttons stack neatly */
     display: block;
     margin-left: 0;
     margin-right: 0;
   }
 
   section {
-    padding: 2rem 1rem; /* Consistent section padding on mobile */
+    padding: 2rem 1rem;
   }
 
   .section-center {
-    padding: 2rem 1rem; /* Adjust padding for all section-center elements */
+    padding: 2rem 1rem;
   }
 
-  /* --- Services Page Adjustments --- */
-  .service-list {
+  /* --- Services & Blog Page Adjustments --- */
+  .service-list, .blog-list {
     grid-template-columns: 1fr;
   }
 
-  /* --- About Page Adjustments --- */
+  /* --- Typography on Pages --- */
+  .services-header h1,
   .about-intro h1,
   .why-choose h2,
-  .about-values h2 {
-    font-size: 1.75rem; /* Slightly smaller headings on mobile */
+  .about-values h2,
+  .contact-intro h1,
+  .contact-details h2,
+  .contact-form h2,
+  .blog-header h1 {
+    font-size: 1.75rem;
   }
 
   .about-intro p,
@@ -380,76 +585,24 @@ footer {
     font-size: 1rem;
   }
 
-  .about-values ul.value-list li {
-    text-align: left; /* Keep left alignment */
-  }
-
-  /* --- Contact Page Adjustments --- */
-  .contact-intro h1,
-  .contact-details h2,
-  .contact-form h2 {
-    font-size: 1.75rem;
-  }
-
-  /* Make contact form elements full width on mobile */
+  /* --- Contact Form Adjustments --- */
   .contact-form label {
-      align-self: center; /* Center labels when form is full width */
+      align-self: flex-start; /* Keep label aligned left for better UX */
   }
   .contact-form input,
   .contact-form textarea {
-      /* Already set to width: 100%; */
-      padding: 0.6rem; /* Slightly less vertical padding on mobile */
-  }
-
-  /* --- Blog Page Adjustments --- */
-  .blog-header h1 {
-    font-size: 1.75rem;
-  }
-
-  .blog-list {
-    grid-template-columns: 1fr;
+      padding: 0.6rem;
   }
 }
 
 @media (min-width: 768px) {
-  .service-list {
+  .service-list, .blog-list {
     grid-template-columns: 1fr 1fr;
   }
 }
 
 @media (min-width: 1200px) {
-  .service-list {
+  .service-list, .blog-list {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
-
-/* Center the form section */
-.contact-form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  width: 100%;
-  padding: 40px 20px;
-}
-
-/* Center the form itself */
-.contact-form form {
-  width: 100%;
-  max-width: 900px;   /* keeps it neatly centered */
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-
-
-
-
-
-
-
-
-
-
