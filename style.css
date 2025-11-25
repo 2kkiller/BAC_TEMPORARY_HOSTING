@@ -431,18 +431,19 @@ footer {
   flex-direction: column;
   width: 100%;
   padding: 40px 20px;
-  height:10px;
+  height:100px;
 }
 
 /* Center the form itself */
 .contact-form form {
   width: 100%;
-  max-width: 650px;   /* keeps it neatly centered */
+  max-width: 900px;   /* keeps it neatly centered */
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
+
 
 
 
