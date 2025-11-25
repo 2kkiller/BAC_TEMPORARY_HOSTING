@@ -440,8 +440,9 @@ footer {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 18px;
-  height: 50px;
+  gap: 10px;
+  height: 20px;
 }
+
 
 
