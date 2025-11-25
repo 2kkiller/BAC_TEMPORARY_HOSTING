@@ -1,158 +1,76 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Bunmi Adelugba & Co. — Home</title>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us | Bunmi Adelugba & Co.</title>
 
-  <!-- AOS CSS -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-  <!-- Main stylesheet -->
-  <link rel="stylesheet" href="css/styles.css">
-
-  <!-- Meta for social previews -->
-  <meta name="description" content="Chartered accountants and tax practitioners. Accounting, tax compliance, advisory.">
+  <title>About Us | Bunmi Adelugba & Co.</title>  
+    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/2kkiller/BAC_TEMPORARY_HOSTING/refs/heads/main/bac_logo-removebg-preview%20(1).png"/>
+<link rel="stylesheet" href="style.css"/>
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
-<body class="page-fade-in">
+<body>
+<!-- Header -->
+<header class="site-header">
+<div class="nav-container">
+<img src="https://raw.githubusercontent.com/2kkiller/BAC_TEMPORARY_HOSTING/refs/heads/main/bac%20logo.jpg" alt="BA& C Logo" class="logo"/>
+<nav>
+<ul class="nav-links">
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html" class="active">About</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="contact.html">Contact</a></li>
+<li><a href="blog.html">Blog</a></li>
+</ul>
+</nav>
+</div>
+</header>
 
-  <!-- Header -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="index.html">
-        <img src="images/logo-white.png" alt="Bunmi Adelugba & Co logo" class="logo">
-        <span class="brand-text">Bunmi Adelugba & Co.</span>
-      </a>
+<!-- Main Content -->
+<main>
+<!-- Intro Section -->
+<section class="about-intro section-center" data-aos="fade-up">
+<h1>About Bunmi Adelugba & Co.</h1>
+<p>
+Bunmi Adelugba & Co. is a professional practice of Chartered Accountants and Tax Practitioners headquartered in Abuja.
+Our firm is built on a commitment to delivering quality audit, accounting, tax, and advisory services to a diverse clientele
+ranging from private businesses to NGOs and public institutions.
+</p>
+</section>
 
-      <button id="navToggle" class="nav-toggle" aria-label="Open navigation">
-        <span class="hamburger"></span>
-      </button>
+<!-- Why Choose Us -->
+<section class="why-choose section-center" data-aos="fade-left">
+<h2>Why Choose Us?</h2>
+<p>
+Our core strength lies in our ability to combine local understanding with global best practices.
+We’ve assembled a multidisciplinary team of accountants, consultants, and tax specialists who are not only technically sound,
+but also passionate about providing client-centric solutions that help you thrive in a competitive marketplace.
+</p>
+</section>
 
-      <nav class="nav" id="mainNav">
-        <ul class="nav-list">
-          <li><a href="index.html" class="nav-link">Home</a></li>
-          <li><a href="about.html" class="nav-link">About</a></li>
-          <li><a href="services.html" class="nav-link">Services</a></li>
-          <li><a href="contact.html" class="nav-link">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+<!-- Core Values -->
+<section class="about-values section-center" data-aos="fade-right">
+<h2>What We Stand For</h2>
+<ul class="value-list">
+<li><strong>Integrity:</strong> We conduct every engagement with honesty, confidentiality, and fairness.</li>
+<li><strong>Professionalism:</strong> We meet international standards without compromise.</li>
+<li><strong>Accountability:</strong> We don’t just offer advice — we deliver on it.</li>
+<li><strong>Self Respect:</strong> Our staff embody dignity, ethics, and character in all dealings.</li>
+</ul>
+</section>
+</main>
 
-  <!-- HERO -->
-  <main>
-    <section class="hero" style="background-image:url('images/hero-bg.jpg')" data-aos="fade" data-aos-duration="900">
-      <div class="container hero-inner">
-        <div class="hero-copy" data-aos="fade-up" data-aos-delay="150">
-          <h1 class="hero-title">Trusted accounting and advisory</h1>
-          <p class="hero-sub">We help organisations stay compliant and grow with confidence.</p>
-          <div class="hero-ctas">
-            <a class="btn primary" href="services.html" data-aos="zoom-in" data-aos-delay="300">Our Services</a>
-            <a class="btn ghost" href="contact.html" data-aos="zoom-in" data-aos-delay="400">Get in touch</a>
-          </div>
-        </div>
+<!-- Footer -->
+<footer>
+<p>&copy; 2025 Bunmi Adelugba & Co. — Chartered Accountants & Tax Practitioners.</p>
+</footer>
 
-        <div class="hero-stats" data-aos="fade-left" data-aos-delay="250">
-          <div class="stat-card">
-            <div class="stat-value" data-count="12">0</div>
-            <div class="stat-label">Years experience</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-value" data-count="200">0</div>
-            <div class="stat-label">Clients</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-value" data-count="350">0</div>
-            <div class="stat-label">Projects</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SERVICES PREVIEW -->
-    <section class="section services-preview container" id="services">
-      <h2 class="section-title" data-aos="fade-up">Services</h2>
-      <p class="section-sub" data-aos="fade-up" data-aos-delay="100">Accounting, tax planning, audits and advisory.</p>
-
-      <div class="cards-grid">
-        <article class="service-card" data-aos="flip-left" data-aos-delay="150">
-          <div class="card-icon" aria-hidden="true">
-            <!-- inline SVG with stroke animation -->
-            <svg class="icon-draw" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M3 3h18v18H3z"></path>
-              <path d="M8 7h8M8 12h8M8 17h5"></path>
-            </svg>
-          </div>
-          <h3 class="card-title">Tax Compliance</h3>
-          <p class="card-text">Advisory and submission support for corporate and individual tax matters.</p>
-          <a class="card-link" href="services.html#tax">Learn more</a>
-        </article>
-
-        <article class="service-card" data-aos="flip-left" data-aos-delay="250">
-          <div class="card-icon" aria-hidden="true">
-            <svg class="icon-draw" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M3 12h18"></path>
-              <path d="M6 6h12v12H6z"></path>
-            </svg>
-          </div>
-          <h3 class="card-title">Bookkeeping</h3>
-          <p class="card-text">Clean records, ready-to-use management reports, and reconciliations.</p>
-          <a class="card-link" href="services.html#bookkeeping">Learn more</a>
-        </article>
-
-        <article class="service-card" data-aos="flip-left" data-aos-delay="350">
-          <div class="card-icon" aria-hidden="true">
-            <svg class="icon-draw" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 2l3 7h7l-5.5 4 2.1 7L12 16l-6.6 4 2.1-7L2 9h7z"></path>
-            </svg>
-          </div>
-          <h3 class="card-title">Advisory</h3>
-          <p class="card-text">Business and financial planning to support your next stage of growth.</p>
-          <a class="card-link" href="services.html#advisory">Learn more</a>
-        </article>
-      </div>
-    </section>
-
-    <!-- ABOUT BLURB -->
-    <section class="section about-blurb" data-aos="fade-up" data-aos-delay="150">
-      <div class="container">
-        <div class="about-grid">
-          <div class="about-copy">
-            <h2>Reliable expertise</h2>
-            <p>We combine careful record keeping with practical advice to help organisations meet their goals.</p>
-            <a class="btn" href="about.html">Read more</a>
-          </div>
-          <div class="about-image" data-aos="zoom-in" data-aos-delay="250">
-            <img src="images/about-photo.jpg" alt="Team at work" />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="site-footer" data-aos="fade-up" data-aos-delay="100">
-      <div class="container footer-inner">
-        <div>© <span id="year"></span> Bunmi Adelugba & Co.</div>
-        <nav class="footer-nav">
-          <a href="privacy.html">Privacy</a>
-          <a href="contact.html">Contact</a>
-        </nav>
-      </div>
-    </footer>
-  </main>
-
-  <!-- AOS JS -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-  <!-- Main JS -->
-  <script src="js/main.js"></script>
-
-  <script>
-    AOS.init({
-      duration: 750,
-      easing: 'ease-out-cubic',
-      once: true
-    });
-  </script>
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>AOS.init({ duration: 1000 });</script>
 </body>
 </html>
+
+
+
