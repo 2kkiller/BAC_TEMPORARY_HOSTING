@@ -1,120 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Contact | Bunmi Adelugba & Co.</title>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact | Bunmi Adelugba & Co.</title>
 
-    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/2kkiller/BAC_TEMPORARY_HOSTING/refs/heads/main/bac_logo-removebg-preview%20(1).png"/>
-<link rel="stylesheet" href="style.css"/>
-<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-<header class="site-header">
-<div class="nav-container">
-<img src="https://raw.githubusercontent.com/2kkiller/BAC_TEMPORARY_HOSTING/refs/heads/main/bac%20logo.jpg" alt="BAC Logo" class="logo" />
-<nav>
-<ul class="nav-links">
-<li><a href="index.html">Home</a></li>
-<li><a href="about.html">About</a></li>
-<li><a href="services.html">Services</a></li>
-<li><a href="contact.html" class="active">Contact</a></li>
-<li><a href="blog.html">Blog</a></li>
-</ul>
-</nav>
-</div>
-</header>
+  <header class="site-header">
+    <div class="nav-container">
+      <img src="https://raw.githubusercontent.com/2kkiller/BAC_TEMPORARY_HOSTING/refs/heads/main/bac%20logo.jpg" alt="BAC Logo" class="logo" />
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-<main>
-<section class="contact-intro section-center" data-aos="fade-up">
-<h1>Get in Touch</h1>
-<p>Have a question or need our services? Reach out — we're here to help.</p>
-</section>
+  <main>
+    <section class="contact-intro section-center" data-aos="fade-up">
+      <h1>Get in Touch</h1>
+      <p>Have a question or need our services? Reach out — we're here to help.</p>
+    </section>
 
-<section class="contact-details section-center" data-aos="fade-left">
-<h2>Contact Info</h2>
-<p><strong>Address:</strong> 
-<a href="https://maps.app.goo.gl/ZNtd5uc1q1JJEHAJ9" target="_blank">
-Plot 6, Ekikunam Street, Utako, Abuja.
-</a>
-</p>
-<p><strong>Phone:</strong> 08061785959, 08023256750, 08067310338</p>
-<p><strong>Email:</strong> 
-<a href="mailto:badecharteredaccts.ng@gmail.com">badecharteredaccts.ng@gmail.com</a>
-</p>
-</section>
+    <section class="contact-details section-center" data-aos="fade-left">
+      <h2>Contact Info</h2>
+      <p><strong>Address:</strong> 
+        <a rel ="noopener"href="https://maps.app.goo.gl/ZNtd5uc1q1JJEHAJ9" target="_blank">
+          Plot 6, Ekikunam Street, Utako, Abuja.
+        </a>
+      </p>
+      <p><strong>Phone:</strong> 08061785959, 08023256750, 08067310338</p>
+      <p><strong>Email:</strong> 
+        <a href="mailto:badecharteredaccts.ng@gmail.com">badecharteredaccts.ng@gmail.com</a>
+      </p>
+    </section>
 
-<section class="contact-form section-center" data-aos="fade-right">
-<h2>Send Us a Message</h2>
-<form id="contact-form">
-<label for="name">Full Name:</label>
-<input type="text" id="name" name="name" required>
+    <section class="contact-form section-center" data-aos="fade-right">
+      <h2>Send Us a Message</h2>
+      <form id="contact-form">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required>
 
-<label for="email">Email Address:</label>
-<input type="email" id="email" name="email" required>
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required>
 
-<label for="phone">Phone Number:</label>
-<input type="tel" id="phone" name="phone">
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone">
 
-<label for="message">Your Message:</label>
-<textarea id="message" name="message" rows="5" required></textarea>
+        <label for="message">Your Message:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
 
-<button type="submit" class="btn">Submit</button>
-</form>
+        <button type="submit" class="btn">Submit</button>
+      </form>
 
-<p id="response"></p>
-</section>
-</main>
+      <p id="response"></p>
+    </section>
+  </main>
 
-<footer>
-<p>© 2025 Bunmi Adelugba & Co. — Chartered Accountants & Tax Practitioners.</p>
-</footer>
+  <footer>
+    <p>© 2025 Bunmi Adelugba & Co. — Chartered Accountants & Tax Practitioners.</p>
+  </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-<script>
-AOS.init({ duration: 1000 });
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000 });
 
-document.addEventListener('DOMContentLoaded', function () {
-const form = document.getElementById('contact-form');
-const response = document.getElementById('response');
+    document.addEventListener('DOMContentLoaded', function () {
+      const form = document.getElementById('contact-form');
+      const response = document.getElementById('response');
 
-// ✅ Your live Google Apps Script Web App URL
-const API_ENDPOINT = 'https://script.google.com/macros/s/AKfycbznurfbG19BgH7IV4BjaCF7BY-w2uT6ODXuoWbrhXv1dUlFWJZxIQtJHk85_I3NkOE/exec';
+      // ✅ Your live Google Apps Script endpoint
+      const API_ENDPOINT = 'https://script.google.com/macros/s/AKfycbznurfbG19BgH7IV4BjaCF7BY-w2uT6ODXuoWbrhXv1dUlFWJZxIQtJHk85_I3NkOE/exec';
 
-if (form) {
-form.addEventListener('submit', async function (e) {
-e.preventDefault();
+      if (form) {
+        form.addEventListener('submit', async function (e) {
+          e.preventDefault();
 
-const payload = {
-name: form.name.value.trim(),
-email: form.email.value.trim(),
-phone: form.phone.value.trim(),
-message: form.message.value.trim()
-};
+          const data = {
+            name: form.name.value.trim(),
+            email: form.email.value.trim(),
+            phone: form.phone.value.trim(),
+            message: form.message.value.trim()
+          };
 
-response.style.color = "#002366";
-response.textContent = "Sending message...";
+          response.style.color = "#002366";
+          response.textContent = "Sending message...";
 
-try {
-await fetch(API_ENDPOINT, {
-method: 'POST',
-mode: 'no-cors',  // bypass CORS
-headers: { 'Content-Type': 'application/json' },
-body: JSON.stringify(payload)
-});
+          try {
+            const res = await fetch(API_ENDPOINT, {
+              method: 'POST',
+              mode: 'no-cors',  // Important for Google Apps Script
+              body: JSON.stringify(data),
+              headers: { 'Content-Type': 'application/json' }
+            });
 
-response.style.color = "green";
-response.textContent = "✅ Thank you! Your message has been sent successfully.";
-form.reset();
-} catch (err) {
-console.error('Submission error:', err);
-response.style.color = "red";
-response.textContent = "❌ Submission failed. Please try again or email us directly.";
-}
-});
-}
-});
-</script>
+            // Since 'no-cors' prevents reading response, show success by default
+            response.style.color = "green";
+            response.textContent = "Thank you! Your message has been sent successfully.";
+            form.reset();
+          } catch (err) {
+            response.style.color = "red";
+            response.textContent = "Submission failed. Please try again or email us directly.";
+            console.error('Error submitting form:', err);
+          }
+        });
+      }
+    });
+  </script>
 </body>
 </html>
-
