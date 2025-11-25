@@ -1,103 +1,294 @@
-/* =============================
-  RESET & BASE STYLES
-============================= */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
+/* Reset and Base styles */
 body {
-font-family: Garamond, serif;
-  line-height: 1.7;
+  font-family: Garamond, serif;
   margin: 0;
   padding: 0;
-color: #111;
-background-color: #ffffff;
+  color: #111;
+  background-color: #fff; /* Keep body background white */
   line-height: 1.7;
 }
 
 a {
-@@ -22,15 +18,17 @@ a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease-in-out;
+}
 
 ul {
-list-style: none;
+  list-style: none;
   padding-left: 0;
   margin: 0;
 }
 
-/* =============================
-   MOBILE-FIRST HEADER & NAV
-   HEADER & NAVIGATION
-============================= */
+/* Header with Gradient: Burgundy to Darker Burgundy/Neutral */
 header.site-header {
-background: linear-gradient(to right, #800020, #4d0014);
-color: white;
-  padding: 0.75rem 1rem;
+  background: linear-gradient(to right, #800020, #4d0013); /* Burgundy to Darker Burgundy */
+  color: white;
   padding: 1rem 2rem;
-position: sticky;
-top: 0;
-z-index: 1000;
-@@ -41,46 +39,35 @@ header.site-header {
-justify-content: space-between;
-align-items: center;
-flex-wrap: wrap;
-  gap: 0.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Logo (Note: logo image remains the same, assuming it works with new colors) */
 .logo {
-  height: 45px;
-  max-width: 100%;
-  object-fit: contain;
-  border: 2px solid #800020;
-  border-radius: 35px;
-  padding: 4px;
-  height: 80px;
+  height: 60px; /* Adjusted to 60px from the second block of CSS */
 }
 
+/* Navigation Links */
 nav {
-  width: 100%;
   display: flex;
 }
 
 .nav-links {
-  display: none; /* hidden by default for mobile */
-  flex-direction: column;
-  width: 100%;
-  gap: 1rem;
-  margin-top: 1rem;
   display: flex;
   gap: 1.5rem;
 }
 
 .nav-links li a {
-color: white;
-font-weight: 600;
-  font-size: 0.95rem;
-  padding: 0.5rem 0;
+  color: white;
+  font-weight: 600;
 }
 
 .nav-links li a:hover,
 .nav-links li a.active {
-  color: #d4af37;
-  text-shadow: 0 0 5px rgba(212, 175, 55, 0.4);
-  color: #ffd1dc;
+  color: #ffd700; /* Gold on hover or active */
+  text-shadow: 0 0 5px rgba(128, 0, 32, 0.4); /* Shadow color based on Burgundy */
+}
+
+/* Hamburger (mobile menu icon) */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Toggle Styles */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+nav#nav-menu {
+  transition: max-height 0.3s ease;
+}
+
+nav#nav-menu.active {
+  display: block;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(to right, #800020, #4d0013); /* Burgundy Gradient */
+  color: white;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Section-Specific Backgrounds */
+.vision-section {
+  background: #f9f9f9; /* Light neutral grey */
+}
+
+.mission-section {
+  background: #fff8e1; /* Very light gold/cream to replace fef6e4 */
+}
+
+.values-section {
+  background: #fdf0f2; /* Very light pink/burgundy tint to replace f1f5ff */
+}
+
+.cta-section {
+  background: linear-gradient(to right, #4d0013, #800020); /* Darker Burgundy to Burgundy */
+  color: white;
+}
+
+/* Buttons */
+.btn, .btn-outline {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+/* Gradient Button */
+.btn {
+  background: linear-gradient(to right, #800020, #a00028); /* Burgundy gradient */
+  color: white;
+  border: none;
+}
+
+.btn:hover {
+  background: linear-gradient(to right, #5e0017, #c10030);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Outline Button */
+.btn-outline {
+  border: 2px solid #800020; /* Burgundy border */
+  color: #800020; /* Burgundy text */
+  background: transparent;
+}
+
+.btn-outline:hover {
+  background: #800020; /* Burgundy background on hover */
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Values list */
+.values-section ul {
+  padding-left: 1rem;
+}
+
+.values-section li {
+  margin-bottom: 0.5rem;
+}
+
+/* Footer */
+footer {
+  background: linear-gradient(to right, #800020, #4d0013); /* Burgundy gradient */
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+.img{
+    color: #afbedd; /* This seems unused, keeping it */
+    background-color: white;
+}
+
+/* =============================
+   RESET & BASE STYLES (Second Block - cleaned up)
+============================= */
+body {
+  font-family: Garamond, serif;
+  margin: 0;
+  padding: 0;
+  color: #111;
+  background-color: #fff; /* Changed from e0e5ec to white */
+  line-height: 1.7;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease-in-out;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+/* =============================
+   HEADER & NAVIGATION
+============================= */
+header.site-header {
+  background: linear-gradient(to right, #800020, #4d0013); /* Burgundy gradient */
+  color: white;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo {
+  height: 60px;
+}
+
+nav {
+  display: flex;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links li a {
+  color: white;
+  font-weight: 600;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+  color: #ffd700; /* Gold */
   text-shadow: 0 0 5px rgba(128, 0, 32, 0.4);
 }
 
-/* Hamburger Menu */
+/* Hamburger Menu (Mobile) */
 .hamburger {
-  display: flex;
   display: none;
-flex-direction: column;
-cursor: pointer;
-gap: 5px;
-@@ -104,81 +91,69 @@ nav {
-transform: rotate(-45deg) translate(5px, -5px);
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
 }
 
-nav#nav-menu.active .nav-links {
-  display: flex;
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
 nav#nav-menu {
   transition: max-height 0.3s ease;
 }
@@ -107,207 +298,114 @@ nav#nav-menu.active {
 }
 
 /* =============================
-  HERO SECTION
+   HERO SECTION
 ============================= */
 .hero {
-text-align: center;
-  padding: 3rem 1rem;
+  text-align: center;
   padding: 4rem 2rem;
-background: linear-gradient(to right, #800020, #4d0014);
-color: white;
+  background: linear-gradient(to right, #800020, #4d0013); /* Burgundy Gradient */
+  color: white;
 }
 
 .hero h1 {
-  font-size: 1.75rem;
-  line-height: 1.2;
-  margin-bottom: 0.75rem;
   font-size: 2.5rem;
   margin-bottom: 1rem;
 }
 
 .hero p {
-  font-size: 0.95rem;
-  max-width: 100%;
   max-width: 700px;
-margin: 0 auto;
+  margin: 0 auto;
 }
 
 /* =============================
-   SECTIONS
    REUSABLE CENTERED SECTION
 ============================= */
 .section-center {
-  max-width: 100%;
   max-width: 900px;
-margin: 0 auto;
-  padding: 2rem 1rem;
+  margin: 0 auto;
   padding: 3rem 1.5rem;
-text-align: center;
-}
-
-.section-center h2 {
-  font-size: 1.6rem;
-color: #800020;
-  margin-bottom: 0.75rem;
-  position: relative;
-  display: inline-block;
-}
-
-.section-center h2::after {
-  content: "";
-  display: block;
-  height: 3px;
-  width: 60px;
-  margin: 0.5rem auto 0;
-  background-color: #d4af37;
-  border-radius: 2px;
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.section-center p {
-  font-size: 1rem;
-  line-height: 1.5;
-  margin-bottom: 1.25rem;
-  font-size: 1.1rem;
-  line-height: 1.7;
-  margin-bottom: 1.5rem;
+  text-align: center;
 }
 
 /* =============================
-  BUTTONS
+   BUTTONS
 ============================= */
-.btn,
-.btn-outline {
 .btn, .btn-outline {
-display: inline-block;
-  width: 100%;
-  padding: 0.9rem 1.2rem;
+  display: inline-block;
   padding: 0.75rem 1.5rem;
-font-size: 1rem;
-font-weight: 600;
-  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
   border-radius: 6px;
-cursor: pointer;
-  margin-top: 0.75rem;
-  text-align: center;
-transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
   margin-top: 1rem;
   text-align: center;
 }
 
 .btn {
-@@ -189,128 +164,218 @@ nav#nav-menu.active .nav-links {
+  background: linear-gradient(to right, #800020, #a00028); /* Burgundy gradient */
+  color: white;
+  border: none;
+}
 
 .btn:hover {
-background: linear-gradient(to right, #630018, #3b0010);
-  box-shadow: 0 4px 14px rgba(212, 175, 55, 0.35);
+  background: linear-gradient(to right, #5e0017, #c10030);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .btn-outline {
-  border: 2px solid #d4af37;
-  border: 2px solid #800020;
-color: #800020;
-background: transparent;
+  border: 2px solid #800020; /* Burgundy border */
+  color: #800020; /* Burgundy text */
+  background: transparent;
 }
 
 .btn-outline:hover {
-  background: #d4af37;
-  color: #4d0014;
-  box-shadow: 0 4px 14px rgba(212, 175, 55, 0.35);
-  background: #800020;
+  background: #800020; /* Burgundy background on hover */
   color: white;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 /* =============================
-  SECTION BACKGROUNDS
+   SECTION BACKGROUNDS
 ============================= */
-.vision-section { background: #ffffff; }
-.mission-section { background: #fff5f7; }
-.values-section { background: #f8f0f4; }
-.cta-section { background: linear-gradient(to right, #4d0014, #800020); color: white; }
 .vision-section {
-  background: #ffffff;
+  background: #f9f9f9;
 }
 .mission-section {
-  background: #fff5f7;
+  background: #fff8e1;
 }
 .values-section {
-  background: #f8f0f4;
+  background: #fdf0f2;
 }
 .cta-section {
-  background: linear-gradient(to right, #4d0014, #800020);
+  background: linear-gradient(to right, #4d0013, #800020);
   color: white;
 }
 
 /* =============================
-   VALUES & SERVICE CARDS
    VALUES LIST
 ============================= */
-.values-section ul,
-.about-values ul.value-list,
-.value-list {
+.values-section ul {
   padding-left: 1rem;
 }
 
-.values-section li,
-.value-list li,
-.about-values ul.value-list li {
-.about-values ul.value-list li,
-.value-list li {
-margin-bottom: 1rem;
-padding: 0.75rem;
-  border-left: 4px solid #d4af37;
-  border-left: 4px solid #800020;
-border-radius: 4px;
-text-align: left;
-background: #fff0f4;
-transition: all 0.3s ease-in-out;
+.values-section li {
+  margin-bottom: 0.5rem;
 }
 
-.values-section li:hover,
-.value-list li:hover,
-.about-values ul.value-list li:hover {
-.about-values ul.value-list li:hover,
-.value-list li:hover {
-background: #800020;
-color: white;
-  border-left-color: #f1d77a;
-  border-left-color: #ffd1dc;
-transform: translateX(5px);
-box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-.service-card,
-.blog-card {
-  background: #ffffff;
-  border-left: 5px solid #d4af37;
-  padding: 1.5rem;
-  border-radius: 8px;
-  transition: all 0.3s ease-in-out;
-}
-
-.service-card:hover,
-.blog-card:hover {
-  border-left-color: #f1d77a;
-  transform: translateY(-5px);
-  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
 /* =============================
    FOOTER
 ============================= */
 footer {
-  background: linear-gradient(to right, #800020, #4d0014);
+  background: linear-gradient(to right, #800020, #4d0013);
   color: white;
   text-align: center;
   padding: 1rem;
 }
 
 /* =============================
-   CONTACT FORM
    CONTACT PAGE
 ============================= */
 .contact-intro,
@@ -328,124 +426,129 @@ footer {
   color: #800020;
 }
 
+.contact-intro p,
+.contact-details p {
+  margin-bottom: 1rem;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.contact-details a {
+  color: #800020;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.contact-details a:hover {
+  color: #ffd700;
+  text-shadow: 0 0 5px rgba(128, 0, 32, 0.3);
+}
+
 .contact-form form {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+  margin-top: 2rem;
+}
+
+.contact-form label {
+  align-self: flex-start;
+  font-weight: 600;
+  color: #800020;
 }
 
 .contact-form input,
 .contact-form textarea {
-width: 100%;
-  padding: 0.85rem;
-  font-size: 1rem;
+  width: 100%;
   padding: 0.75rem 1rem;
-border: 1px solid #bfa0a8;
-border-radius: 6px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: Garamond, serif;
   font-size: 1rem;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-  border-color: #d4af37;
-  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.2);
   border-color: #800020;
   outline: none;
-  box-shadow: 0 0 0 3px rgba(128,0,32,0.1);
+  box-shadow: 0 0 0 3px rgba(128, 0, 32, 0.1);
 }
 
 /* =============================
-   FOOTER
    SERVICES PAGE
 ============================= */
-footer {
-  background: linear-gradient(to right, #800020, #4d0014);
-  color: white;
-  text-align: center;
-  padding: 1rem;
+.services-header h1 {
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #800020;
+}
+
+.services-header p {
+  font-size: 1.05rem;
+  margin-bottom: 2rem;
+}
+
 .service-list {
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
 }
 
-footer a:hover {
-  color: #d4af37;
 .service-card {
-  background-color: #fff;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
   border-left: 5px solid #800020;
-  padding: 1.5rem;
   border-radius: 8px;
+  padding: 1.5rem;
   transition: all 0.3s ease-in-out;
+  text-align: left;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.03);
 }
 
 .service-card:hover {
   transform: translateY(-5px);
-  border-left-color: #ffd1dc;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  border-left-color: #ffd700;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.service-card h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+  color: #800020;
+}
+
+.service-card p {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
 }
 
 /* =============================
-   RESPONSIVE LAYOUTS (TABLET/DESKTOP)
-   BLOG PAGE
-============================= */
-@media (min-width: 601px) {
-  .nav-links {
-    display: flex !important;
-    flex-direction: row;
-    gap: 1.5rem;
-    margin-top: 0;
-    width: auto;
-.blog-list {
-  display: grid;
-  gap: 2rem;
-}
-
-.blog-card {
-  background: #ffffff;
-  border-left: 5px solid #800020;
-  padding: 1.5rem;
-  border-radius: 8px;
-  transition: all 0.3s ease-in-out;
-}
-
-.blog-card:hover {
-  transform: translateY(-5px);
-  border-left-color: #ffd1dc;
-}
-
-/* =============================
-   RESPONSIVE LAYOUTS
+   RESPONSIVE STYLES
 ============================= */
 @media (max-width: 768px) {
+  /* --- General Mobile Adjustments (Header & Nav) --- */
   .nav-container {
     flex-direction: column;
     align-items: flex-start;
-}
+  }
 
-  .hamburger { display: none; }
   .hamburger {
     display: flex;
   }
 
-  .hero h1 { font-size: 2rem; }
-  .hero p { font-size: 1rem; }
   nav#nav-menu {
     display: none;
     width: 100%;
   }
 
-  .section-center h2 { font-size: 2rem; }
-  .section-center p { font-size: 1.1rem; }
   nav#nav-menu.active {
     display: block;
   }
 
-  .btn,
-  .btn-outline {
-    width: auto;
-    padding: 0.75rem 1.5rem;
   .nav-links {
     flex-direction: column;
     width: 100%;
@@ -453,207 +556,253 @@ footer a:hover {
     margin-top: 1rem;
   }
 
+  /* --- Layout & Typography Adjustments --- */
   .hero h1 {
     font-size: 2rem;
   }
 
   .hero p {
-font-size: 1rem;
-}
+    font-size: 1rem;
+  }
 
   .btn, .btn-outline {
     width: 100%;
+    /* Ensure buttons stack neatly */
+    display: block;
+    margin-left: 0;
+    margin-right: 0;
   }
 
   section {
-    padding: 2rem 1rem;
+    padding: 2rem 1rem; /* Consistent section padding on mobile */
   }
 
-  .service-list,
+  .section-center {
+    padding: 2rem 1rem; /* Adjust padding for all section-center elements */
+  }
+
+  /* --- Services Page Adjustments --- */
+  .service-list {
+    grid-template-columns: 1fr;
+  }
+
+  /* --- About Page Adjustments --- */
+  .about-intro h1,
+  .why-choose h2,
+  .about-values h2 {
+    font-size: 1.75rem; /* Slightly smaller headings on mobile */
+  }
+
+  .about-intro p,
+  .why-choose p {
+    font-size: 1rem;
+  }
+
+  .about-values ul.value-list li {
+    text-align: center; /* Center align list items on small screens for better reading */
+  }
+
+  /* --- Contact Page Adjustments --- */
+  .contact-intro h1,
+  .contact-details h2,
+  .contact-form h2 {
+    font-size: 1.75rem;
+  }
+
+  /* Make contact form elements full width on mobile */
+  .contact-form label {
+      align-self: center; /* Center labels when form is full width */
+  }
+  .contact-form input,
+  .contact-form textarea {
+      /* Already set to width: 100%; */
+      padding: 0.6rem; /* Slightly less vertical padding on mobile */
+  }
+
+  /* --- Blog Page Adjustments --- */
+  .blog-header h1 {
+    font-size: 1.75rem;
+  }
+
   .blog-list {
     grid-template-columns: 1fr;
   }
 }
 
 @media (min-width: 768px) {
-@@ -326,3 +391,180 @@ footer a:hover {
-grid-template-columns: 1fr 1fr 1fr;
-}
-}
-
-
-/* =============================
-   GOLD ACCENTS
-============================= */
-
-/* Nav Hover Accent */
-.nav-links li a:hover,
-.nav-links li a.active {
-  color: #d4af37;
-  text-shadow: 0 0 5px rgba(212, 175, 55, 0.4);
+  .service-list {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
-/* Buttons */
-.btn-outline {
-  border: 2px solid #d4af37;
-  color: #800020;
+@media (min-width: 1200px) {
+  .service-list {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
-.btn-outline:hover {
-  background: #d4af37;
-  color: #4d0014;
+
+/* ========================================
+   ABOUT PAGE STYLING
+=========================================== */
+
+/* Reuse central section layout */
+.section-center {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+  text-align: center;
 }
 
-.btn:hover {
-  box-shadow: 0 4px 14px rgba(212, 175, 55, 0.35);
+/* Headings */
+.about-intro h1,
+.why-choose h2,
+.about-values h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #800020; /* Burgundy */
 }
 
-/* Values & cards */
-.values-section li,
-.value-list li,
+/* Paragraphs */
+.about-intro p,
+.why-choose p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+/* Values List */
+.about-values ul.value-list {
+  padding-left: 1rem;
+  margin-top: 1.5rem;
+  text-align: left;
+}
+
+/* Specific About Page Value list items */
 .about-values ul.value-list li {
-  border-left: 4px solid #d4af37;
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  background: #fdf0f2; /* Light burgundy tint */
+  border-left: 4px solid #800020; /* Burgundy solid border */
+  border-radius: 4px;
+  transition: all 0.3s ease-in-out;
 }
 
-.values-section li:hover,
-.value-list li:hover,
 .about-values ul.value-list li:hover {
-  border-left-color: #f1d77a;
+  background: #f3e6e8; /* Slightly darker tint on hover */
+  border-left-color: #ffd700; /* Gold hover accent */
+  transform: translateX(5px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Service cards */
-.service-card {
-  border-left: 5px solid #d4af37;
+/* Page-wide centering utility (redundant, but keeping for consistency) */
+.section-center {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+  text-align: center;
 }
 
-.service-card:hover {
-  border-left-color: #f1d77a;
+/* Value list hover effect (General rule for index.html values list) */
+.value-list li {
+  background: #fdf0f2; /* Light burgundy tint */
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border-left: 4px solid #800020; /* Burgundy solid border */
+  border-radius: 4px;
+  text-align: left;
+  transition: all 0.3s ease-in-out;
 }
 
-/* Blog cards */
+.value-list li:hover {
+  background: #f3e6e8; /* Slightly darker tint on hover */
+  border-left-color: #ffd700; /* Gold hover accent */
+  transform: translateX(5px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Section Centering Utility (redundant, but keeping for consistency) */
+.section-center {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+.section-center h2 {
+  color: #800020; /* Burgundy */
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.section-center p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+/* ========================================
+   BLOG PAGE STYLES
+=========================================== */
+
+.blog-header h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #800020; /* Burgundy */
+  margin-bottom: 1rem;
+}
+
+.blog-header p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.blog-list {
+  display: grid;
+  gap: 2rem;
+}
+
 .blog-card {
-  border-left: 5px solid #d4af37;
+  background: #ffffff;
+  border: 1px solid #ccc;
+  border-left: 5px solid #800020; /* Burgundy border */
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: left;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.03);
 }
 
 .blog-card:hover {
-  border-left-color: #f1d77a;
+  transform: translateY(-5px);
+  border-left-color: #ffd700; /* Gold hover accent */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
 }
 
-/* Section title gold underline */
-.section-center h2 {
-  position: relative;
-  display: inline-block;
+.blog-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  color: #800020; /* Burgundy */
 }
 
-.section-center h2::after {
-  content: "";
-  display: block;
-  height: 3px;
-  width: 60px;
-  margin: 0.5rem auto 0;
-  background-color: #d4af37;
-  border-radius: 2px;
+.blog-card p {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 1rem;
 }
 
-/* Contact form focus */
-.contact-form input:focus,
-.contact-form textarea:focus {
-  border-color: #d4af37;
-  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.2);
+/* Responsive Layout */
+@media (min-width: 768px) {
+  .blog-list {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
-/* Footer links with gold hover */
-footer a:hover {
-  color: #d4af37;
-}
-
-/* =======================================
-   MOBILE IMPROVEMENTS FOR HEADERS & BUTTONS
-   (Apply on very small devices)
-======================================= */
-@media (max-width: 600px) {
-
-  /* Header spacing */
-  header.site-header {
-    padding: 0.75rem 1rem;
-  }
-
-  /* Logo smaller and tighter */
-  .logo {
-    height: 45px;
-    border-radius: 35px;
-    padding: 4px;
-  }
-
-  /* Navigation layout */
-  .nav-container {
-    gap: 0.5rem;
-  }
-
-  .nav-links {
-    gap: 0.75rem;
-  }
-
-  .nav-links li a {
-    font-size: 0.95rem;
-    padding: 0.5rem 0;
-  }
-
-  /* Hero text easier to read */
-  .hero {
-    padding: 3rem 1rem;
-  }
-
-  .hero h1 {
-    font-size: 1.75rem;
-    line-height: 1.2;
-  }
-
-  .hero p {
-    font-size: 0.95rem;
-    line-height: 1.5;
-  }
-
-  /* Section titles */
-  .section-center h2 {
-    font-size: 1.6rem;
-    margin-bottom: 0.75rem;
-  }
-
-  .section-center p {
-    font-size: 1rem;
-  }
-
-  /* Buttons full-width and easier to tap */
-  .btn,
-  .btn-outline {
-    width: 100%;
-    font-size: 1rem;
-    padding: 0.9rem 1.2rem;
-    border-radius: 8px;
-    margin-top: 0.75rem;
-  }
-
-  /* Reduce animation on mobile */
-  .btn:hover,
-  .btn-outline:hover {
-    transform: none;
-  }
-
-  /* Smaller spacing for section padding */
-  section,
-  .section-center {
-    padding: 2rem 1rem;
-  }
-
-  /* Contact form spacing */
-  .contact-form input,
-  .contact-form textarea {
-    font-size: 1rem;
-    padding: 0.85rem;
-  }
-
-  .contact-form h2 {
-    font-size: 1.6rem;
+@media (min-width: 1200px) {
+  .blog-list {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
