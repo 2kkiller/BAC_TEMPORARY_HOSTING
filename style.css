@@ -431,7 +431,6 @@ footer {
   flex-direction: column;
   width: 100%;
   padding: 40px 20px;
-  height:100px;
 }
 
 /* Center the form itself */
@@ -443,6 +442,7 @@ footer {
   flex-direction: column;
   gap: 15px;
 }
+
 
 
 
