@@ -1,130 +1,158 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bunmi Adelugba & Co. | Chartered Accountants & Tax Practitioners</title>
-  <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/2kkiller/BAC_TEMPORARY_HOSTING/refs/heads/main/bac%20logo.jpg"/>
-  <!-- External CSS -->
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Bunmi Adelugba & Co. — Home</title>
 
-  <!-- Animate On Scroll (AOS) -->
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Meta for social previews -->
+  <meta name="description" content="Chartered accountants and tax practitioners. Accounting, tax compliance, advisory.">
 </head>
-<body>
+<body class="page-fade-in">
+
   <!-- Header -->
   <header class="site-header">
-    <div class="nav-container">
-      <img src="https://raw.githubusercontent.com/2kkiller/BAC_TEMPORARY_HOSTING/refs/heads/main/bac%20logo.jpg" alt="Bunmi Adelugba & Co. Logo" class="logo" />
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <img src="images/logo-white.png" alt="Bunmi Adelugba & Co logo" class="logo">
+        <span class="brand-text">Bunmi Adelugba & Co.</span>
+      </a>
 
-      <!-- Hamburger Menu -->
-      <div class="hamburger" id="hamburger">
-        <span></span><span></span><span></span>
-      </div>
+      <button id="navToggle" class="nav-toggle" aria-label="Open navigation">
+        <span class="hamburger"></span>
+      </button>
 
-      <!-- Navigation -->
-      <nav id="nav-menu" class="nav-menu">
-        <ul class="nav-links">
-          <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="blog.html">Blog</a></li>
+      <nav class="nav" id="mainNav">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <!-- Main Content -->
+  <!-- HERO -->
   <main>
-    <!-- Hero Section -->
-    <section class="hero" data-aos="fade-up">
-      <div class="container">
-        <h1>Precision. Integrity. Results.</h1>
-        <p>
-          We help individuals, businesses, and organizations navigate complex financial landscapes with confidence.
-          Whether you're scaling, stabilizing, or starting out, our team is here to support every step.
-        </p>
-        <a href="services.html" class="btn" aria-label="Explore our services">Explore Our Services</a>
+    <section class="hero" style="background-image:url('images/hero-bg.jpg')" data-aos="fade" data-aos-duration="900">
+      <div class="container hero-inner">
+        <div class="hero-copy" data-aos="fade-up" data-aos-delay="150">
+          <h1 class="hero-title">Trusted accounting and advisory</h1>
+          <p class="hero-sub">We help organisations stay compliant and grow with confidence.</p>
+          <div class="hero-ctas">
+            <a class="btn primary" href="services.html" data-aos="zoom-in" data-aos-delay="300">Our Services</a>
+            <a class="btn ghost" href="contact.html" data-aos="zoom-in" data-aos-delay="400">Get in touch</a>
+          </div>
+        </div>
+
+        <div class="hero-stats" data-aos="fade-left" data-aos-delay="250">
+          <div class="stat-card">
+            <div class="stat-value" data-count="12">0</div>
+            <div class="stat-label">Years experience</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value" data-count="200">0</div>
+            <div class="stat-label">Clients</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value" data-count="350">0</div>
+            <div class="stat-label">Projects</div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- Vision Section -->
-    <section class="vision-section section-center" data-aos="fade-right">
-      <div class="container">
-        <h2>Our Vision</h2>
-        <p>
-          To become a globally respected accounting and tax consultancy firm—offering expert guidance, promoting financial discipline,
-          and contributing to economic progress by helping clients build sustainable, compliant, and profitable enterprises.
-        </p>
+    <!-- SERVICES PREVIEW -->
+    <section class="section services-preview container" id="services">
+      <h2 class="section-title" data-aos="fade-up">Services</h2>
+      <p class="section-sub" data-aos="fade-up" data-aos-delay="100">Accounting, tax planning, audits and advisory.</p>
+
+      <div class="cards-grid">
+        <article class="service-card" data-aos="flip-left" data-aos-delay="150">
+          <div class="card-icon" aria-hidden="true">
+            <!-- inline SVG with stroke animation -->
+            <svg class="icon-draw" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 3h18v18H3z"></path>
+              <path d="M8 7h8M8 12h8M8 17h5"></path>
+            </svg>
+          </div>
+          <h3 class="card-title">Tax Compliance</h3>
+          <p class="card-text">Advisory and submission support for corporate and individual tax matters.</p>
+          <a class="card-link" href="services.html#tax">Learn more</a>
+        </article>
+
+        <article class="service-card" data-aos="flip-left" data-aos-delay="250">
+          <div class="card-icon" aria-hidden="true">
+            <svg class="icon-draw" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 12h18"></path>
+              <path d="M6 6h12v12H6z"></path>
+            </svg>
+          </div>
+          <h3 class="card-title">Bookkeeping</h3>
+          <p class="card-text">Clean records, ready-to-use management reports, and reconciliations.</p>
+          <a class="card-link" href="services.html#bookkeeping">Learn more</a>
+        </article>
+
+        <article class="service-card" data-aos="flip-left" data-aos-delay="350">
+          <div class="card-icon" aria-hidden="true">
+            <svg class="icon-draw" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2l3 7h7l-5.5 4 2.1 7L12 16l-6.6 4 2.1-7L2 9h7z"></path>
+            </svg>
+          </div>
+          <h3 class="card-title">Advisory</h3>
+          <p class="card-text">Business and financial planning to support your next stage of growth.</p>
+          <a class="card-link" href="services.html#advisory">Learn more</a>
+        </article>
       </div>
     </section>
 
-    <!-- Mission Section -->
-    <section class="mission-section section-center" data-aos="fade-left">
+    <!-- ABOUT BLURB -->
+    <section class="section about-blurb" data-aos="fade-up" data-aos-delay="150">
       <div class="container">
-        <h2>Our Mission</h2>
-        <p>
-          Our mission is to provide practical, forward-thinking, and accurate financial solutions. We invest in our team’s growth,
-          adopt global standards, and apply the best tools to ensure our clients receive timely, reliable, and personalized service.
-        </p>
+        <div class="about-grid">
+          <div class="about-copy">
+            <h2>Reliable expertise</h2>
+            <p>We combine careful record keeping with practical advice to help organisations meet their goals.</p>
+            <a class="btn" href="about.html">Read more</a>
+          </div>
+          <div class="about-image" data-aos="zoom-in" data-aos-delay="250">
+            <img src="images/about-photo.jpg" alt="Team at work" />
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- Core Values Section -->
-    <section class="values-section section-center" data-aos="fade-up">
-      <h2>Our Core Values</h2>
-      <ul class="value-list">
-        <li><strong>Integrity:</strong> We stay true to our word—always doing what’s right, not just what’s easy.</li>
-        <li><strong>Professionalism:</strong> Our experienced team delivers quality work with respect and competence.</li>
-        <li><strong>Honesty:</strong> We’re transparent in our processes, communication, and billing.</li>
-        <li><strong>Accountability:</strong> We take full responsibility for our advice, actions, and outcomes.</li>
-        <li><strong>Self-Respect:</strong> We build trust through discipline, dignity, and high standards.</li>
-      </ul>
-    </section>
-
-    <!-- Call to Action Section -->
-    <section class="cta-section" data-aos="zoom-in">
-      <div class="container">
-        <h3>Let’s Transform Your Finances</h3>
-        <p>
-          Whether you're an entrepreneur, a non-profit, or an established company,
-          we’ll guide you with clear advice and compliant solutions tailored to your goals.
-        </p>
-        <a href="contact.html" class="btn-outline" aria-label="Get in touch with us">Get in Touch</a>
+    <!-- FOOTER -->
+    <footer class="site-footer" data-aos="fade-up" data-aos-delay="100">
+      <div class="container footer-inner">
+        <div>© <span id="year"></span> Bunmi Adelugba & Co.</div>
+        <nav class="footer-nav">
+          <a href="privacy.html">Privacy</a>
+          <a href="contact.html">Contact</a>
+        </nav>
       </div>
-    </section>
+    </footer>
   </main>
 
-  <!-- Footer -->
-  <footer>
-    <div class="footer-container">
-      <p>&copy; 2025 Bunmi Adelugba & Co. | Chartered Accountants & Tax Practitioners. All rights reserved.</p>
-    </div>
-  </footer>
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-  <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <!-- Main JS -->
+  <script src="js/main.js"></script>
+
   <script>
-    AOS.init({ duration: 1000, once: true });
-
-    document.addEventListener("DOMContentLoaded", () => {
-      const hamburger = document.getElementById("hamburger");
-      const navMenu = document.getElementById("nav-menu");
-
-      hamburger.addEventListener("click", () => {
-        hamburger.classList.toggle("active");
-        navMenu.classList.toggle("active");
-      });
-
-      document.querySelectorAll(".nav-links a").forEach(link => {
-        link.addEventListener("click", () => {
-          hamburger.classList.remove("active");
-          navMenu.classList.remove("active");
-        });
-      });
+    AOS.init({
+      duration: 750,
+      easing: 'ease-out-cubic',
+      once: true
     });
   </script>
 </body>
 </html>
-
