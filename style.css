@@ -3,9 +3,9 @@
 ================================= */
 
 @keyframes pulseBorder {
-    0% { box-shadow: 0 0 0 0 rgba(255, 196, 0, 0.4); } /* Gold Shadow */
-    70% { box-shadow: 0 0 0 5px rgba(255, 196, 0, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(255, 196, 0, 0); }
+    0% { box-shadow: 0 0 0 0 rgba(0, 128, 128, 0.4); } /* Deep Teal Shadow */
+    70% { box-shadow: 0 0 0 5px rgba(0, 128, 128, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(0, 128, 128, 0); }
 }
 
 @keyframes float {
@@ -19,14 +19,14 @@ body {
   font-family: Garamond, serif;
   margin: 0;
   padding: 0;
-  color: #F3F4F6; /* Light text for dark background */
-  background-color: #001236; /* Dark Navy Base Background */
+  color: #222; /* Dark text for readability on light background */
+  background-color: #E0FFFF; /* Light Aqua Base Background */
   line-height: 1.7;
 }
 
 a {
   text-decoration: none;
-  color: #FFC400; /* Gold links */
+  color: #008080; /* Deep Teal links */
   transition: color 0.3s ease-in-out;
 }
 
@@ -39,9 +39,9 @@ ul {
 /* =============================
    HEADER & NAVIGATION
 ============================= */
-/* Header with Dynamic Navy Gradient */
+/* Header with Dynamic Deep Teal Gradient */
 header.site-header {
-  background: linear-gradient(90deg, #001F5C 0%, #001236 70%, #002A7D 100%); /* Navy Gradient */
+  background: linear-gradient(90deg, #008080 0%, #004D4D 70%, #00A0A0 100%); /* Deep Teal Gradient */
   color: white;
   padding: 1rem 2rem;
   position: sticky;
@@ -72,7 +72,7 @@ nav {
 }
 
 .nav-links li a {
-  color: #F3F4F6; /* Light text */
+  color: white; /* Light text on dark header */
   font-weight: 600;
   position: relative;
 }
@@ -99,7 +99,7 @@ nav {
     width: 100%;
 }
 
-/* Hamburger (mobile menu icon) */
+/* Hamburger (mobile menu icon) styles retained */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -110,7 +110,7 @@ nav {
 .hamburger span {
   width: 25px;
   height: 3px;
-  background-color: #F3F4F6; /* Light color for icon */
+  background-color: white;
   border-radius: 2px;
   transition: all 0.3s ease;
 }
@@ -137,11 +137,11 @@ nav#nav-menu.active {
 /* =============================
    HERO SECTION
 ============================= */
-/* Hero with Dynamic Navy Gradient & Animation */
+/* Hero with Dynamic Deep Teal Gradient & Animation */
 .hero {
   text-align: center;
   padding: 4rem 2rem;
-  background: linear-gradient(135deg, #001F5C, #002A7D, #001236); /* Navy Gradient */
+  background: linear-gradient(135deg, #008080, #00A0A0, #004D4D); /* Deep Teal Gradient */
   color: white;
   animation: pulseBorder 4s infinite;
 }
@@ -181,16 +181,16 @@ nav#nav-menu.active {
   text-align: center;
 }
 
-/* Gradient Button (Primary Navy) */
+/* Gradient Button (Primary Deep Teal) */
 .btn {
-  background: linear-gradient(to right, #001F5C, #002A7D); /* Navy Gradient */
+  background: linear-gradient(to right, #008080, #00A0A0); /* Deep Teal Gradient */
   color: white;
   border: none;
-  box-shadow: 0 4px 10px rgba(0, 31, 92, 0.4);
+  box-shadow: 0 4px 10px rgba(0, 128, 128, 0.4);
 }
 
 .btn:hover {
-  background: linear-gradient(to right, #003399, #00174D);
+  background: linear-gradient(to right, #009999, #006666);
   transform: translateY(-3px);
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
 }
@@ -200,13 +200,13 @@ nav#nav-menu.active {
   border: 2px solid;
   border-image: linear-gradient(to right, #FFC400, #F0B300); /* Gold gradient border */
   border-image-slice: 1;
-  color: #FFC400; /* Gold text */
+  color: #008080; /* Deep Teal text */
   background: transparent;
 }
 
 .btn-outline:hover {
   background: #FFC400; /* Gold background on hover */
-  color: #001F5C; /* Navy text on hover */
+  color: #008080; /* Deep Teal text on hover */
   transform: translateY(-3px);
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
 }
@@ -214,22 +214,22 @@ nav#nav-menu.active {
 /* =============================
    SECTION BACKGROUNDS
 ============================= */
-/* All sections use Burgundy for contrast against Navy body */
+/* Sections alternate between Light Aqua and Deep Teal */
 .vision-section {
-  background: #800020; /* Burgundy */
+  background: #FFFFFF; /* Pure white contrast */
 }
 
 .mission-section {
-  background: #4d0013; /* Darker Burgundy */
-  color: #F3F4F6;
+  background: #E0FFFF; /* Light Aqua */
+  color: #222;
 }
 
 .values-section {
-  background: #800020; /* Burgundy */
+  background: #FFFFFF; /* Pure white contrast */
 }
 
 .cta-section {
-  background: linear-gradient(to right, #001236, #001F5C); /* Darker Navy to Navy */
+  background: linear-gradient(to right, #004D4D, #008080); /* Darker Teal to Teal */
   color: white;
 }
 
@@ -241,31 +241,31 @@ nav#nav-menu.active {
 }
 
 .value-list li {
-  background: #4d0013; /* Dark Burgundy background for list item */
+  background: #E0FFFF; /* Light Aqua background for list item */
   padding: 0.75rem;
   margin-bottom: 1rem;
   border-left: 4px solid;
   border-image: linear-gradient(to bottom, #FFC400, #F0B300); /* Gold gradient border */
   border-image-slice: 1;
   text-align: left;
-  color: #F3F4F6;
+  color: #222; /* Dark text */
   transition: all 0.3s ease-in-out;
 }
 
 .value-list li:hover {
-  background: #990025; /* Lighter Burgundy on hover */
+  background: #C0F8F8; /* Slightly darker Aqua on hover */
   border-left-color: #FFC400;
   transform: translateX(10px);
-  box-shadow: 0 4px 10px rgba(255, 196, 0, 0.2);
+  box-shadow: 0 4px 10px rgba(0, 128, 128, 0.2);
 }
 
 
 /* =============================
    FOOTER
 ============================= */
-/* Footer with Dynamic Navy Gradient */
+/* Footer with Dynamic Deep Teal Gradient */
 footer {
-  background: linear-gradient(90deg, #001F5C 0%, #001236 70%, #002A7D 100%);
+  background: linear-gradient(90deg, #008080 0%, #004D4D 70%, #00A0A0 100%);
   color: white;
   text-align: center;
   padding: 1rem;
@@ -281,7 +281,8 @@ footer {
   margin: 0 auto;
   text-align: center;
   padding: 3rem 1.5rem;
-  background-color: #001236; /* Ensure section uses base dark background */
+  background-color: #E0FFFF; /* Use Light Aqua background */
+  color: #222;
 }
 
 .contact-intro h1,
@@ -290,7 +291,7 @@ footer {
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 1rem;
-  color: #FFC400; /* Gold headings */
+  color: #008080; /* Deep Teal headings */
 }
 
 .contact-intro p,
@@ -298,17 +299,17 @@ footer {
   margin-bottom: 1rem;
   font-size: 1.05rem;
   line-height: 1.6;
-  color: #F3F4F6; /* Light text */
+  color: #222;
 }
 
 .contact-details a {
-  color: #FFC400; /* Gold links */
+  color: #008080; /* Deep Teal links */
   font-weight: bold;
   transition: all 0.3s ease;
 }
 
 .contact-details a:hover {
-  color: #F0B300; /* Darker Gold on hover */
+  color: #FFC400; /* Gold on hover */
   text-shadow: 0 0 5px rgba(255, 196, 0, 0.5);
 }
 
@@ -323,16 +324,16 @@ footer {
 .contact-form label {
   align-self: flex-start;
   font-weight: 600;
-  color: #F3F4F6; /* Light labels */
+  color: #008080; /* Deep Teal labels */
 }
 
 .contact-form input,
 .contact-form textarea {
   width: 100%;
   padding: 0.75rem 1rem;
-  border: 1px solid #FFC400; /* Gold border for inputs */
-  background-color: #001F5C; /* Navy input background */
-  color: #FFC400; /* Gold text in inputs */
+  border: 1px solid #008080; /* Deep Teal border for inputs */
+  background-color: #FFFFFF; /* White input background */
+  color: #222; /* Dark text in inputs */
   border-radius: 6px;
   font-family: Garamond, serif;
   font-size: 1rem;
@@ -343,7 +344,7 @@ footer {
 .contact-form textarea:focus {
   border-color: #FFC400; /* Gold focus border */
   outline: none;
-  box-shadow: 0 0 0 3px rgba(255, 196, 0, 0.3);
+  box-shadow: 0 0 0 3px rgba(0, 128, 128, 0.3);
 }
 
 /* =============================
@@ -353,13 +354,13 @@ footer {
   font-size: 2.2rem;
   font-weight: bold;
   margin-bottom: 1rem;
-  color: #FFC400; /* Gold headings */
+  color: #008080; /* Deep Teal headings */
 }
 
 .services-header p {
   font-size: 1.05rem;
   margin-bottom: 2rem;
-  color: #F3F4F6;
+  color: #222;
 }
 
 .service-list {
@@ -371,7 +372,7 @@ footer {
 .service-card {
   /* Added subtle float animation */
   animation: float 6s ease-in-out infinite;
-  background-color: #4d0013; /* Dark Burgundy card background */
+  background-color: #FFFFFF; /* White card background */
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
   border-left: 5px solid;
   border-image: linear-gradient(to bottom, #FFC400, #F0B300); /* Gold gradient border */
@@ -389,18 +390,18 @@ footer {
 .service-card:hover {
   transform: translateY(-8px);
   border-left-color: #FFC400;
-  box-shadow: 0 8px 20px rgba(255, 196, 0, 0.3); /* Gold shadow on hover */
+  box-shadow: 0 8px 20px rgba(0, 128, 128, 0.3); /* Teal shadow on hover */
 }
 
 .service-card h3 {
   margin-bottom: 0.5rem;
   font-size: 1.3rem;
-  color: #FFC400; /* Gold headings */
+  color: #008080; /* Deep Teal headings */
 }
 
 .service-card p {
   font-size: 1rem;
-  color: #F3F4F6; /* Light text */
+  color: #222;
   line-height: 1.6;
 }
 
@@ -415,7 +416,7 @@ footer {
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 1rem;
-  color: #FFC400; /* Gold headings */
+  color: #008080; /* Deep Teal headings */
 }
 
 /* Paragraphs */
@@ -424,27 +425,27 @@ footer {
   font-size: 1.05rem;
   line-height: 1.7;
   margin-bottom: 1.5rem;
-  color: #F3F4F6;
+  color: #222;
 }
 
 /* Specific About Page Value list items */
 .about-values ul.value-list li {
   margin-bottom: 1rem;
   padding: 0.75rem;
-  background: #4d0013; /* Dark Burgundy */
+  background: #E0FFFF; /* Light Aqua */
   border-left: 4px solid;
   border-image: linear-gradient(to bottom, #FFC400, #F0B300); /* Gold gradient border */
   border-image-slice: 1;
   border-radius: 4px;
   transition: all 0.3s ease-in-out;
-  color: #F3F4F6;
+  color: #222;
 }
 
 .about-values ul.value-list li:hover {
-  background: #990025; /* Lighter Burgundy on hover */
+  background: #C0F8F8; /* Slightly darker Aqua on hover */
   border-left-color: #FFC400;
   transform: translateX(10px);
-  box-shadow: 0 4px 10px rgba(255, 196, 0, 0.2);
+  box-shadow: 0 4px 10px rgba(0, 128, 128, 0.2);
 }
 
 /* ========================================
@@ -454,14 +455,14 @@ footer {
 .blog-header h1 {
   font-size: 2rem;
   font-weight: bold;
-  color: #FFC400; /* Gold headings */
+  color: #008080; /* Deep Teal headings */
   margin-bottom: 1rem;
 }
 
 .blog-header p {
   font-size: 1.1rem;
   margin-bottom: 2rem;
-  color: #F3F4F6;
+  color: #222;
 }
 
 .blog-list {
@@ -472,9 +473,9 @@ footer {
 .blog-card {
   /* Added subtle float animation */
   animation: float 6s ease-in-out infinite;
-  background: #4d0013; /* Dark Burgundy card background */
-  border: 1px solid #FFC400; /* Gold card border */
-  border-left: 5px solid #FFC400; /* Gold accent */
+  background: #FFFFFF; /* White card background */
+  border: 1px solid #008080; /* Deep Teal card border */
+  border-left: 5px solid #008080; /* Deep Teal accent */
   border-radius: 8px;
   padding: 1.5rem;
   text-align: left;
@@ -488,19 +489,19 @@ footer {
 
 .blog-card:hover {
   transform: translateY(-8px);
-  border-left-color: #F0B300;
-  box-shadow: 0 8px 20px rgba(255, 196, 0, 0.3); /* Gold shadow on hover */
+  border-left-color: #FFC400; /* Gold hover accent */
+  box-shadow: 0 8px 20px rgba(0, 128, 128, 0.3);
 }
 
 .blog-card h3 {
   font-size: 1.4rem;
   margin-bottom: 0.5rem;
-  color: #FFC400; /* Gold headings */
+  color: #008080; /* Deep Teal headings */
 }
 
 .blog-card p {
   font-size: 1rem;
-  color: #F3F4F6; /* Light text */
+  color: #222;
   margin-bottom: 1rem;
 }
 
@@ -508,7 +509,7 @@ footer {
    RESPONSIVE STYLES (FINAL)
 ============================= */
 @media (max-width: 768px) {
-  /* ... Responsive styles retained and adapted for dark mode ... */
+  /* --- General Mobile Adjustments (Header & Nav) --- */
   .nav-container {
     flex-direction: column;
     align-items: flex-start;
@@ -561,6 +562,7 @@ footer {
     grid-template-columns: 1fr;
   }
 
+  /* --- Typography on Pages --- */
   .services-header h1,
   .about-intro h1,
   .why-choose h2,
@@ -577,6 +579,7 @@ footer {
     font-size: 1rem;
   }
 
+  /* --- Contact Form Adjustments --- */
   .contact-form label {
       align-self: flex-start;
   }
