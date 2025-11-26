@@ -4,68 +4,108 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>About Us | Bunmi Adelugba & Co.</title>
-
   <link rel="stylesheet" href="style.css"/>
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-  <!-- Header -->
-  <header class="site-header">
+
+  <div class="preloader" id="preloader"><div class="loader-ring"></div></div>
+  <div class="ambient-container"><div class="blob blob-1"></div><div class="blob blob-2"></div></div>
+
+  <header>
     <div class="nav-container">
-      <img src="assets/logo.png" alt="BAC Logo" class="logo"/>
+      <img src="https://raw.githubusercontent.com/2kkiller/BAC_TEMPORARY_HOSTING/refs/heads/main/bac%20logo.jpg" alt="BAC Logo" class="logo"/>
       <nav>
         <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html" class="active">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="blog.html">Blog</a></li>
+          <li><a href="index_test.html">Home</a></li>
+          <li><a href="about_test.html" class="active">About</a></li>
+          <li><a href="services_test.html">Services</a></li>
+          <li><a href="blog_test.html">Blog</a></li>
+          <li><a href="contact_test.html">Contact</a></li>
         </ul>
+        <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
       </nav>
     </div>
   </header>
 
-  <!-- Main Content -->
-  <main>
-    <!-- Intro Section -->
-    <section class="about-intro section-center" data-aos="fade-up">
-      <h1>About Bunmi Adelugba & Co.</h1>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="index_test.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <section class="about-hero">
+    <div class="reveal-on-scroll">
+      <h1>Our Firm</h1>
+      <p>Precision, Integrity, and Professional Excellence.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="reveal-on-scroll">
+      <h2>Our Story</h2>
       <p>
-        Bunmi Adelugba & Co. is a professional practice of Chartered Accountants and Tax Practitioners headquartered in Abuja.
-        Our firm is built on a commitment to delivering quality audit, accounting, tax, and advisory services to a diverse clientele
-        ranging from private businesses to NGOs and public institutions.
+        Bunmi Adelugba & Co. is a trusted firm of Chartered Accountants serving clients across Nigeria. 
+        We provide reliable accounting, audit, and tax advisory services built on years of professional experience. 
+        Our commitment is to help businesses navigate financial complexities with clarity and confidence.
       </p>
-    </section>
+    </div>
+  </section>
 
-    <!-- Why Choose Us -->
-    <section class="why-choose section-center" data-aos="fade-left">
-      <h2>Why Choose Us?</h2>
-      <p>
-        Our core strength lies in our ability to combine local understanding with global best practices.
-        We’ve assembled a multidisciplinary team of accountants, consultants, and tax specialists who are not only technically sound,
-        but also passionate about providing client-centric solutions that help you thrive in a competitive marketplace.
-      </p>
-    </section>
+  <section class="section">
+    <h2 class="reveal-on-scroll">Our Core Values</h2>
+    <div class="card-grid">
+      <div class="card reveal-on-scroll" style="transition-delay: 100ms;">
+        <div class="icon-box"><i class="fas fa-handshake"></i></div>
+        <h3>Integrity</h3>
+        <p>Strict professional conduct and ethical compliance in all dealings.</p>
+      </div>
+      <div class="card reveal-on-scroll" style="transition-delay: 200ms;">
+        <div class="icon-box"><i class="fas fa-bullseye"></i></div>
+        <h3>Accuracy</h3>
+        <p>Uncompromising precision in every financial report and audit engagement.</p>
+      </div>
+      <div class="card reveal-on-scroll" style="transition-delay: 300ms;">
+        <div class="icon-box"><i class="fas fa-star"></i></div>
+        <h3>Excellence</h3>
+        <p>Dependable and insightful financial solutions that drive value.</p>
+      </div>
+    </div>
+  </section>
 
-    <!-- Core Values -->
-    <section class="about-values section-center" data-aos="fade-right">
-      <h2>What We Stand For</h2>
-      <ul class="value-list">
-        <li><strong>Integrity:</strong> We conduct every engagement with honesty, confidentiality, and fairness.</li>
-        <li><strong>Professionalism:</strong> We meet international standards without compromise.</li>
-        <li><strong>Accountability:</strong> We don’t just offer advice — we deliver on it.</li>
-        <li><strong>Self Respect:</strong> Our staff embody dignity, ethics, and character in all dealings.</li>
-      </ul>
-    </section>
-  </main>
+  <section class="section">
+    <h2 class="reveal-on-scroll">Lead Partner</h2>
+    <div class="card partner-card reveal-on-scroll">
+        <div class="partner-layout">
+            <div class="partner-image">
+                <img src="https://placehold.co/400x500/1c3b60/D4AF37?text=Bunmi+Adelugba" alt="Bunmi Adelugba">
+            </div>
+            
+            <div class="partner-info">
+                <h3>Bunmi Adelugba</h3>
+                <span class="partner-role">Founder & Chartered Accountant</span>
+                <p>
+                    With over two decades of experience in high-level financial auditing and tax consultancy, 
+                    Bunmi Adelugba leads the firm with a passion for transparency and growth. 
+                </p>
+                <p>
+                    A Fellow of the Institute of Chartered Accountants of Nigeria (ICAN), Bunmi is dedicated to ensuring 
+                    that every client receives personalized, strategic guidance to navigate the complex economic landscape of Nigeria.
+                </p>
+            </div>
+        </div>
+    </div>
+  </section>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Bunmi Adelugba & Co. — Chartered Accountants & Tax Practitioners.</p>
-  </footer>
+  <footer><p>© 2025 Bunmi Adelugba & Co.</p></footer>
 
-  <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <script>AOS.init({ duration: 1000 });</script>
+  <script>
+    window.addEventListener('load', () => { document.getElementById('preloader').classList.add('hidden'); setTimeout(() => document.getElementById('preloader').style.display='none', 500); });
+    const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if(entry.isIntersecting) entry.target.classList.add('visible'); }); }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal-on-scroll').forEach(el => observer.observe(el));
+    document.getElementById('hamburger').addEventListener('click', () => document.getElementById('mobile-menu').classList.toggle('active'));
+  </script>
 </body>
 </html>
