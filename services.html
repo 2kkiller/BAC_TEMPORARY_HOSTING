@@ -4,7 +4,9 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Services | Bunmi Adelugba & Co.</title>
+  
   <link rel="stylesheet" href="style.css"/>
+  
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -31,6 +33,7 @@
       </nav>
     </div>
   </header>
+  
   <div class="mobile-menu" id="mobile-menu">
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
@@ -45,44 +48,70 @@
   </section>
 
   <section class="section services-grid">
-    <h2 data-aos="fade-up">What We Offer</h2>
-    <div class="card-grid">
+    <h2 data-aos="fade-up" style="text-align:center; margin-bottom:40px;">What We Offer</h2>
+    
+    <div class="services-list-container">
 
-      <div class="card" data-aos="fade-up">
-        <div class="icon-box"><i class="fas fa-search"></i></div>
-        <h3>Audit & Assurance</h3>
-        <p>Independent evaluations to strengthen financial reporting and ensure compliance.</p>
+      <div class="service-row" data-aos="fade-up">
+        <div class="service-image-box">
+          <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=800&auto=format&fit=crop" alt="Audit & Assurance">
+        </div>
+        <div class="service-content-box">
+          <h3>Audit & Assurance</h3>
+          <p>Independent evaluations to strengthen financial reporting and ensure compliance. We verify your financial records to provide stakeholders with confidence in the transparency of your business.</p>
+        </div>
       </div>
 
-      <div class="card" data-aos="fade-up" data-aos-delay="150">
-        <div class="icon-box"><i class="fas fa-file-invoice"></i></div>
-        <h3>Tax Advisory</h3>
-        <p>Tax planning and filing designed to help you stay compliant and reduce liabilities.</p>
+      <div class="service-row" data-aos="fade-up">
+        <div class="service-image-box">
+          <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=800&auto=format&fit=crop" alt="Tax Advisory">
+        </div>
+        <div class="service-content-box">
+          <h3>Tax Advisory</h3>
+          <p>Tax planning and filing designed to help you stay compliant and reduce liabilities. We navigate complex tax regulations to ensure you maximize your efficiency while meeting all deadlines.</p>
+        </div>
       </div>
 
-      <div class="card" data-aos="fade-up" data-aos-delay="300">
-        <div class="icon-box"><i class="fas fa-calculator"></i></div>
-        <h3>Accounting Services</h3>
-        <p>Professional bookkeeping, financial reporting, and system setup tailored to you.</p>
+      <div class="service-row" data-aos="fade-up">
+        <div class="service-image-box">
+          <img src="https://images.unsplash.com/photo-1554224154-260327c00c4b?q=80&w=800&auto=format&fit=crop" alt="Accounting Services">
+        </div>
+        <div class="service-content-box">
+          <h3>Accounting Services</h3>
+          <p>Professional bookkeeping, financial reporting, and system setup tailored to you. We maintain accurate ledgers and provide the insights you need to manage your day-to-day finances effectively.</p>
+        </div>
       </div>
 
-      <div class="card" data-aos="fade-up" data-aos-delay="450">
-        <div class="icon-box"><i class="fas fa-briefcase"></i></div>
-        <h3>Business Advisory</h3>
-        <p>Insightful guidance to help clients make informed decisions and achieve growth.</p>
+      <div class="service-row" data-aos="fade-up">
+        <div class="service-image-box">
+          <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=800&auto=format&fit=crop" alt="Business Advisory">
+        </div>
+        <div class="service-content-box">
+          <h3>Business Advisory</h3>
+          <p>Insightful guidance to help clients make informed decisions and achieve growth. From strategic planning to operational improvements, we partner with you to scale your business successfully.</p>
+        </div>
       </div>
 
-      <div class="card" data-aos="fade-up" data-aos-delay="600">
-        <div class="icon-box"><i class="fas fa-users"></i></div>
-        <h3>Payroll Management</h3>
-        <p>Reliable payroll preparation, deductions processing, and compliance documentation.</p>
+      <div class="service-row" data-aos="fade-up">
+        <div class="service-image-box">
+          <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=800&auto=format&fit=crop" alt="Payroll Management">
+        </div>
+        <div class="service-content-box">
+          <h3>Payroll Management</h3>
+          <p>Reliable payroll preparation, deductions processing, and compliance documentation. We ensure your team is paid on time and all statutory requirements are handled with precision.</p>
+        </div>
       </div>
 
-      <div class="card" data-aos="fade-up" data-aos-delay="750">
-        <div class="icon-box"><i class="fas fa-shield-alt"></i></div>
-        <h3>Internal Control</h3>
-        <p>Evaluation of internal processes to improve efficiency and prevent fraud.</p>
+      <div class="service-row" data-aos="fade-up">
+        <div class="service-image-box">
+          <img src="https://images.unsplash.com/photo-1614064641938-3e852943702d?q=80&w=800&auto=format&fit=crop" alt="Internal Control">
+        </div>
+        <div class="service-content-box">
+          <h3>Internal Control</h3>
+          <p>Evaluation of internal processes to improve efficiency and prevent fraud. We assess your current systems to identify risks and implement robust controls that safeguard your assets.</p>
+        </div>
       </div>
+
     </div>
   </section>
 
@@ -104,7 +133,7 @@
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>
     AOS.init({ duration: 800, once: true });
-    
+     
     const ham = document.getElementById("hamburger");
     const menu = document.getElementById("mobile-menu");
     if (ham && menu) {
@@ -114,9 +143,10 @@
       });
     }
 
+    // Cursor Logic
     const cursorDot = document.querySelector('[data-cursor-dot]');
     const cursorOutline = document.querySelector('[data-cursor-outline]');
-    const hoverTargets = document.querySelectorAll('a, button, .card, input, textarea');
+    const hoverTargets = document.querySelectorAll('a, button, .service-row, input, textarea');
 
     window.addEventListener('mousemove', function (e) {
       const posX = e.clientX;
@@ -137,18 +167,6 @@
       el.addEventListener('mouseenter', () => document.body.classList.add('hovering'));
       el.addEventListener('mouseleave', () => document.body.classList.remove('hovering'));
     });
-
-    const cards = document.querySelectorAll(".card");
-    cards.forEach((card) => {
-      card.addEventListener("mousemove", (e) => {
-        const rect = card.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-        card.style.setProperty("--mouse-x", `${x}px`);
-        card.style.setProperty("--mouse-y", `${y}px`);
-      });
-    });
   </script>
 </body>
 </html>
-
