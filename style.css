@@ -414,7 +414,7 @@ footer p { color: #8892b0; font-size: 1rem; }
 }
 
 /* =================================
-   13. PARTNER LAYOUT (New Section)
+   13. PARTNER LAYOUT
 ================================= */
 .partner-card {
     width: 100%;
@@ -478,4 +478,110 @@ footer p { color: #8892b0; font-size: 1rem; }
         height: 350px;
     }
     .partner-info h3 { text-align: center; }
+}
+
+/* =================================
+   14. SERVICES ALTERNATING LAYOUT
+================================= */
+.services-list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 60px; /* Space between rows */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 60px;
+}
+
+.service-row {
+  display: flex;
+  align-items: center;
+  /* Dark Glass Effect */
+  background: var(--glass-bg);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.service-row:hover {
+  transform: translateY(-5px);
+  border-color: var(--brand-gold); /* Gold glow on hover */
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+}
+
+/* FLIP LAYOUT: Even rows (2, 4, 6) reverse direction */
+.service-row:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.service-image-box {
+  flex: 1;
+  height: 350px;
+  overflow: hidden;
+  position: relative;
+  border-right: 1px solid rgba(255,255,255,0.05); /* Subtle divider */
+}
+
+/* Fix border for reversed items */
+.service-row:nth-child(even) .service-image-box {
+    border-right: none;
+    border-left: 1px solid rgba(255,255,255,0.05);
+}
+
+.service-image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.service-row:hover .service-image-box img {
+  transform: scale(1.05); /* Zoom image on hover */
+}
+
+.service-content-box {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+
+.service-content-box h3 {
+  font-size: 1.8rem;
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: var(--brand-gold); /* Gold Title */
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.2);
+}
+
+.service-content-box p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--text-off-white);
+  margin: 0;
+}
+
+/* Responsiveness for Services */
+@media (max-width: 900px) {
+  .service-row, .service-row:nth-child(even) {
+    flex-direction: column;
+  }
+  
+  .service-image-box {
+    width: 100%;
+    height: 250px;
+    border-right: none;
+    border-left: none;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+  }
+
+  .service-content-box {
+    padding: 30px;
+    text-align: center;
+  }
 }
